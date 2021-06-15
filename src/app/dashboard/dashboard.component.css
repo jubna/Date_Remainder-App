@@ -1,0 +1,21 @@
+.display{
+    padding-top: 330px;
+}
+.btnS{
+    margin-top: 20px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.home_container {
+    position: absolute;
+    top: 60px;
+    margin: 20px;
+    width: 350px;
+    padding: 16px;
+    background-color: white;
+   box-shadow: 2px 5px #888888;
+  }

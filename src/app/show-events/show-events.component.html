@@ -1,0 +1,27 @@
+
+<div class="row display justify-content-center">
+    <div class="col-md-4"> </div>
+  <div class="col-md-4 text-center">
+   <h3>Event History</h3>
+   <div class="table-responsive" >
+    <table class="table table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Date</th>
+                <th>Event</th>
+               <!--  <th>Delete</th> -->
+            </tr>
+        </thead>
+        <tbody  >
+            <tr *ngFor="let user of userEvents" >
+              <td>{{user.date}}</td> 
+                <td>{{user.event}}</td>
+               <!--  <td><button type="button" ><i class="far fa-trash-alt"></i></button></td> -->
+            </tr>
+        
+            </tbody>
+            </table>
+            </div>
+  </div>
+  <div class="col-md-4"> </div>
+  </div>
