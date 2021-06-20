@@ -11,24 +11,30 @@ import { ServicesService } from '../services/services.service';
 export class DashboardComponent implements OnInit {
    
   user=localStorage.getItem("name");
-  addRemainderForm= this.fb.group({ 
+  date="";
+  event=""
+ /*  addRemainderForm= this.fb.group({ 
     date:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]],
     event:['',[Validators.required,Validators.pattern('[a-zA-Z0-9]*')]]
   })
-
-  constructor(private fb:FormBuilder, private service:ServicesService,private router:Router) { }
+ */
+  constructor(private fb:FormBuilder, private service:ServicesService,private router:Router) { 
+   
+  }
 
   ngOnInit(): void {
   }
   
   addRemainder(){
-    var date=this.addRemainderForm.value.date;
-     var event=this.addRemainderForm.value.event;
+    var date=this.date;
+     var eventMsg=this.event;
     var email=localStorage.getItem("email");
-     this.service.addRemainder(email,date,event)
+     this.service.addRemainder(email,date,eventMsg)
      .subscribe((result:any)=>{
      if(result){
       alert(result.message)
+     /*  localStorage.setItem("date",result.date)
+      localStorage.setItem("event",result.event)  */
     }
   },
   (result)=>{
@@ -49,4 +55,23 @@ export class DashboardComponent implements OnInit {
         this.router.navigateByUrl("showEvents")
      
   }
+
+Remainder(){
+  document.getElementById("rem").style.display="block";
+  var email=localStorage.getItem("email");
+  console.log(email);
+  
+     this.service.DisplayRemainder(email)
+     .subscribe((result:any)=>{
+     if(result){
+      document.getElementById("rem").innerHTML=result.message;
+   
+    }
+  },
+  (result)=>{
+    alert(result.error.message)
+  }
+     )
+     
+}
 }

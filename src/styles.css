@@ -5,20 +5,32 @@
 .bg-img {
     /* The image used */
     background-image: url("assets/bg.jpg");
-    min-height: 620px;
+    min-height:620px;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
   }
+ 
+  .bg{
+    background-color: rgb(204, 204, 43);
+    min-height:750px;
+   
+}
+.navbar-dark {
+  font-family: 'Righteous', cursive;
+  background:#1669bd; 
+  padding: 20px;
+}
+
 .home_container {
     position: absolute;
-    top: 60px;
+    top: 120px;
     margin: 20px;
     width: 350px;
-    padding: 16px;
-    background-color: white;
+    padding: 20px;
+    background-color: rgb(129, 142, 172);
    
   }
  /*  .showEvent_container {
@@ -31,7 +43,7 @@
    
   } */
  
-  input[type=text], input[type=password] ,input[type=email]{
+  input[type=text], input[type=password] ,input[type=email], input[type=date]{
     width: 100%;
     padding: 10px;
     margin: 5px 0 10px 0;
@@ -39,7 +51,7 @@
     background: #f1f1f1;
   }
   
-  input[type=text]:focus, input[type=password]:focus ,input[type=email]:focus {
+  input[type=text]:focus, input[type=password]:focus ,input[type=email]:focus ,input[type=date]:focus{
     background-color: #ddd;
     outline: none;
   }
@@ -87,7 +99,7 @@
 }
 .forgot a,.logout a{
     text-decoration: none;
-    color: #3b5998;
+    color: #05153b;
     font-size: 17px;
 }
 

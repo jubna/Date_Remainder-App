@@ -65,29 +65,23 @@ export class ServicesService {
    } */
  }
 
- addRemainder(email,date:any,event:any){
+ addRemainder(email,date:any,eventMsg:any){
 
   const data={
     email,
     date,
-    event
+    eventMsg
       }
 
    return this.http.post("http://localhost:8080/addRemainder/",data,this.options);
   /* var users=this.UserDetails;
-    
   if(email in users) {
     users[email]["events"].push({date:date,event:event});
-   
-    console.log(email,users[email])
+   console.log(email,users[email])
     console.log(date,event);
-    
    localStorage.setItem("users[email]['events']",JSON.stringify(users[email]['events']))
-    
-
    // console.log(users[email]['events'])
    // console.log(users[email]['events']['date'],users[email]['events']['event']);
-
     return true;
   }
 else{
@@ -95,18 +89,37 @@ else{
 } */
  }
 
- showEvents(email){
+ DisplayRemainder(email){
+   
+  const data={
+    email
+  }
+    return this.http.post("http://localhost:8080/DisplayRemainder/",data,this.options);
+ }
+ dltEvent(email:any,eventDet:any){
+  const data={
+    email,
+    eventDet
+      }
+      return this.http.post("http://localhost:8080/dltEvent/",data,this.options);
+ }
 
+editEvent(email,indexNum,Edate,EMsg){
+  const data={
+    email,
+    indexNum,
+    Edate,
+    EMsg
+      }
+      return this.http.post("http://localhost:8080/editEvent/",data,this.options);
+ }
+ showEvents(email){
   const data={
     email
       }
-
    return this.http.post("http://localhost:8080/showEvents/",data,this.options);
- /*  var users=this.UserDetails;
-  if(email in users) {
-    return(users[email]["events"])
-  } */
  }
+
 }
 
 

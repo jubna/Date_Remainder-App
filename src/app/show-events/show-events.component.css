@@ -1,0 +1,20 @@
+.ev{
+    margin-top: 30px;
+}
+#update{
+    display: none;
+    border: 1px ridge rgb(252, 225, 225);
+    background-color: rgb(163, 199, 240);
+    margin-top: 20px;
+    padding: 22px;
+    box-shadow: 2px 5px #888888;
+    margin-left: 50px;
+     width: 350px; 
+}
+#slno{
+    display: none;
+}
+.tbl{
+    background-color: rgb(163, 199, 240);
+   
+}

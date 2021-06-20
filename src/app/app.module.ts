@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ShowEventsComponent } from './show-events/show-events.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ShowEventsComponent } from './show-events/show-events.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    ShowEventsComponent
+    ShowEventsComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
